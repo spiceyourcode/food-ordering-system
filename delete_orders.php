@@ -1,0 +1,19 @@
+<?php
+include("connection/connect.php"); //connection to db
+error_reporting(E_ALL); // Enable error reporting for debugging
+session_start();
+
+
+// sending query
+$stmt = $db->prepare("DELETE FROM users_orders WHERE o_id = ?");
+$stmt->bind_param("i", $_GET['order_del']);
+$stmt->execute();
+if ($stmt->affected_rows > 0) {
+    // Optionally, you can set a success message here
+} else {
+    // Optionally, you can set an error message here
+}
+$stmt->close();
+header("location:your_orders.php"); // Redirect after deletion
+
+?>
