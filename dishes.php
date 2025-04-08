@@ -175,7 +175,7 @@ include_once 'product-action.php';
                                     ?>
                                     <a href="checkout.php?res_id=<?php echo $_GET['res_id']; ?>&action=check"
                                         class="btn btn-success btn-lg active">Checkout</a>
-                                <?php
+                                    <?php
                                 }
                                 ?>
 
@@ -234,7 +234,7 @@ include_once 'product-action.php';
                                             </div>
 
                                             <div class="col-xs-12 col-sm-12 col-lg-3 pull-right item-cart-info">
-                                                <span class="price pull-left">$<?php echo $product['price']; ?></span>
+                                                <span class="price pull-left">Ksh<?php echo $product['price']; ?></span>
                                                 <input class="b-r-0" type="text" name="quantity" style="margin-left:30px;"
                                                     value="1" size="2" />
                                                 <input type="submit" class="btn theme-btn" style="margin-left:40px;"
@@ -293,7 +293,7 @@ include_once 'product-action.php';
                             </div>
                             <div class="col-xs-12 col-sm-4 address color-gray">
                                 <h5>Address</h5>
-                                <p>1086 Stockert Hollow Road, Seattle</p>
+                                <p>Nairobi</p>
                                 <h5>Phone: 75696969855</a></h5>
                             </div>
                             <div class="col-xs-12 col-sm-5 additional-info color-gray">

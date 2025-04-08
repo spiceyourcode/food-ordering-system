@@ -115,7 +115,7 @@ if (isset($_SESSION["user_id"])) {
                     </div>
 
                 </div>
-
+                l
             </div>
         </div>
 
@@ -123,7 +123,16 @@ if (isset($_SESSION["user_id"])) {
 
 
     <!-- recommender section will be added here  -->
-    <section class="popular">
+    <section class="popular padding0">
+
+        <style>
+            .padding0 {
+                padding: auto 0px 0px auto;
+            }
+
+            pop
+        </style>
+
         <?php if (isset($recommended_dishes) && !empty($recommended_dishes)): ?>
             <div class="container">
                 <div class="title text-xs-center m-b-30">
@@ -142,7 +151,7 @@ if (isset($_SESSION["user_id"])) {
                                     </h5>
                                     <div class="product-name"><?php echo $dish['slogan']; ?></div>
                                     <div class="price-btn-block">
-                                        <span class="price">$<?php echo $dish['price']; ?></span>
+                                        <span class="price">Ksh<?php echo $dish['price']; ?></span>
                                         <a href="dishes.php?res_id=<?php echo $dish['rs_id']; ?>"
                                             class="btn theme-btn-dash pull-right">Order Now</a>
                                     </div>
@@ -165,7 +174,7 @@ if (isset($_SESSION["user_id"])) {
             </div>
             <div class="row">
                 <?php
-                $query_res = mysqli_query($db, "select * from dishes LIMIT 6");
+                $query_res = mysqli_query($db, "select * from dishes LIMIT 12");
                 while ($r = mysqli_fetch_array($query_res)) {
                     echo '  <div class="col-xs-12 col-sm-6 col-md-4 col-md-4 food-item">
                                             <div class="food-item-wrap">
@@ -173,7 +182,7 @@ if (isset($_SESSION["user_id"])) {
                                                 <div class="content">
                                                     <h5><a href="dishes.php?res_id=' . $r['rs_id'] . '">' . $r['title'] . '</a></h5>
                                                     <div class="product-name">' . $r['slogan'] . '</div>
-                                                    <div class="price-btn-block"> <span class="price">$' . $r['price'] . '</span> <a href="dishes.php?res_id=' . $r['rs_id'] . '" class="btn theme-btn-dash pull-right">Order Now</a> </div>
+                                                    <div class="price-btn-block"> <span class="price">Ksh ' . $r['price'] . '</span> <a href="dishes.php?res_id=' . $r['rs_id'] . '" class="btn theme-btn-dash pull-right">Order Now</a> </div>
                                                 </div>
                                                 
                                             </div>
@@ -346,7 +355,7 @@ if (isset($_SESSION["user_id"])) {
                     </div>
                     <div class="col-xs-12 col-sm-4 address color-gray">
                         <h5>Address</h5>
-                        <p>1086 Stockert Hollow Road, Seattle</p>
+                        <p>Nairobi</p>
                         <h5>Phone: 75696969855</a></h5>
                     </div>
                     <div class="col-xs-12 col-sm-5 additional-info color-gray">

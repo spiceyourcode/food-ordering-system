@@ -232,7 +232,7 @@ if (empty($_SESSION['user_id'])) {
 													<tr>
 														<td data-column="Item"> <?php echo $row['title']; ?></td>
 														<td data-column="Quantity"> <?php echo $row['quantity']; ?></td>
-														<td data-column="price">$<?php echo $row['price']; ?></td>
+														<td data-column="price">Ksh<?php echo $row['price']; ?></td>
 														<td data-column="status">
 															<?php
 															$status = $row['status'];
@@ -335,7 +335,7 @@ if (empty($_SESSION['user_id'])) {
 						</div>
 						<div class="col-xs-12 col-sm-4 address color-gray">
 							<h5>Address</h5>
-							<p>1086 Stockert Hollow Road, Seattle</p>
+							<p>Nairobi</p>
 							<h5>Phone: 75696969855</a></h5>
 						</div>
 						<div class="col-xs-12 col-sm-5 additional-info color-gray">

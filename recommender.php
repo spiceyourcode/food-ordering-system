@@ -1,17 +1,20 @@
 <?php
 include("connection.php");
 
-class DishRecommender {
+class DishRecommender
+{
     private $db;
-    
-    public function __construct($db) {
+
+    public function __construct($db)
+    {
         $this->db = $db;
     }
-    
-    public function getRecommendations($user_id) {
+
+    public function getRecommendations($user_id)
+    {
         // Get user preferences
         $prefs = $this->getUserPreferences($user_id);
-        
+
         // Base query with weighted scoring
         $query = "SELECT d.*, 
                   (CASE WHEN d.cuisine_type = ? THEN 2 ELSE 0 END +
@@ -24,38 +27,41 @@ class DishRecommender {
                     WHERE user_id = ? 
                     AND order_date > DATE_SUB(NOW(), INTERVAL 7 DAY)
                   )";
-        
+
         if (!empty($prefs['dietary_restrictions'])) {
             $query .= " AND d.dietary_tags LIKE ?";
         }
-        
-        $query .= " ORDER BY score DESC LIMIT 6";
-        
+
+        $query .= " ORDER BY score DESC LIMIT 3";
+
         // Prepare and execute
         $stmt = $this->db->prepare($query);
-        
+
         if (!empty($prefs['dietary_restrictions'])) {
             $dietary = "%{$prefs['dietary_restrictions']}%";
-            $stmt->bind_param("ssss", 
+            $stmt->bind_param(
+                "ssss",
                 $prefs['cuisine_type'],
                 $prefs['spice_level'],
                 $user_id,
                 $dietary
             );
         } else {
-            $stmt->bind_param("sss", 
+            $stmt->bind_param(
+                "sss",
                 $prefs['cuisine_type'],
                 $prefs['spice_level'],
                 $user_id
             );
         }
-        
+
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-    
-    private function getUserPreferences($user_id) {
+
+    private function getUserPreferences($user_id)
+    {
         $query = "SELECT * FROM user_preferences WHERE user_id = ? ORDER BY created_at DESC LIMIT 1";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param("i", $user_id);
