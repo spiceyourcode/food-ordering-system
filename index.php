@@ -356,7 +356,7 @@ if (isset($_SESSION["user_id"])) {
                     <div class="col-xs-12 col-sm-4 address color-gray">
                         <h5>Address</h5>
                         <p>Nairobi</p>
-                        <h5>Phone: 75696969855</a></h5>
+                        <h5>Phone: 0756969696</a></h5>
                     </div>
                     <div class="col-xs-12 col-sm-5 additional-info color-gray">
                         <h5>Addition informations</h5>
