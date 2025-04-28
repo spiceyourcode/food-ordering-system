@@ -333,7 +333,7 @@ if (isset($_SESSION["user_id"])) {
 
             <div class="bottom-footer">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-3 payment-options color-gray">
+                    /* <div class="col-xs-12 col-sm-3 payment-options color-gray">
                         <h5>Payment Options</h5>
                         <ul>
                             <li>
@@ -352,7 +352,7 @@ if (isset($_SESSION["user_id"])) {
                                 <a href="#"> <img src="images/bitcoin.png" alt="Bitcoin"> </a>
                             </li>
                         </ul>
-                    </div>
+                    </div> */
                     <div class="col-xs-12 col-sm-4 address color-gray">
                         <h5>Address</h5>
                         <p>Nairobi</p>

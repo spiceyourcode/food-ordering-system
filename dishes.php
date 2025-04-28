@@ -135,7 +135,7 @@ include_once 'product-action.php';
 
                                     <div class="form-group row no-gutter">
                                         <div class="col-xs-8">
-                                            <input type="text" class="form-control b-r-0" value=<?php echo "$" . $item["price"]; ?> readonly id="exampleSelect1">
+                                            <input type="text" class="form-control b-r-0" value=<?php echo "Ksh" . $item["price"]; ?> readonly id="exampleSelect1">
 
                                         </div>
                                         <div class="col-xs-4">
@@ -160,7 +160,7 @@ include_once 'product-action.php';
                         <div class="widget-body">
                             <div class="price-wrap text-xs-center">
                                 <p>TOTAL</p>
-                                <h3 class="value"><strong><?php echo "$" . $item_total; ?></strong></h3>
+                                <h3 class="value"><strong><?php echo "Ksh" . $item_total; ?></strong></h3>
                                 <p>Free Delivery!</p>
                                 <?php
                                 if ($item_total == 0) {
@@ -271,7 +271,7 @@ include_once 'product-action.php';
                 <div class="row bottom-footer">
                     <div class="container">
                         <div class="row">
-                            <div class="col-xs-12 col-sm-3 payment-options color-gray">
+                            <!-- <div class="col-xs-12 col-sm-3 payment-options color-gray">
                                 <h5>Payment Options</h5>
                                 <ul>
                                     <li>
@@ -290,7 +290,7 @@ include_once 'product-action.php';
                                         <a href="#"> <img src="images/bitcoin.png" alt="Bitcoin"> </a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> -->
                             <div class="col-xs-12 col-sm-4 address color-gray">
                                 <h5>Address</h5>
                                 <p>Nairobi</p>

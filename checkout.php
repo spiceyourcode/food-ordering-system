@@ -143,7 +143,7 @@ if (empty($_SESSION["user_id"])) {
 
                                                             <tr>
                                                                 <td>Cart Subtotal</td>
-                                                                <td> <?php echo "$" . $item_total; ?></td>
+                                                                <td> <?php echo "ksh" . $item_total; ?></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Delivery Charges</td>
@@ -152,7 +152,7 @@ if (empty($_SESSION["user_id"])) {
                                                             <tr>
                                                                 <td class="text-color"><strong>Total</strong></td>
                                                                 <td class="text-color"><strong>
-                                                                        <?php echo "$" . $item_total; ?></strong></td>
+                                                                        <?php echo "ksh" . $item_total; ?></strong></td>
                                                             </tr>
                                                         </tbody>
 
@@ -163,7 +163,7 @@ if (empty($_SESSION["user_id"])) {
                                                 </div>
                                             </div>
                                             <div class="payment-option">
-                                                <ul class=" list-unstyled">
+                                                <!-- <ul class=" list-unstyled">
                                                     <li>
                                                         <label class="custom-control custom-radio  m-b-20">
                                                             <input name="mod" id="radioStacked1" checked value="COD"
@@ -186,7 +186,7 @@ if (empty($_SESSION["user_id"])) {
                                                         onclick="return confirm('Do you want to confirm the order?');"
                                                         name="submit" class="btn btn-success btn-block" value="Order Now">
                                                 </p>
-                                            </div>
+                                            </div> -->
                                 </form>
                             </div>
                         </div>

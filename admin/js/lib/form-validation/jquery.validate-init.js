@@ -47,7 +47,7 @@ var form_validation = function() {
                     },
                     "val-currency": {
                         required: !0,
-                        currency: ["$", !0]
+                        currency: ["ksh", !0]
                     },
                     "val-website": {
                         required: !0,
